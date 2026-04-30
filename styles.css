@@ -1,0 +1,110 @@
+:root {
+  --bg-primary: #f7f4ed;
+  --bg-secondary: #fffefa;
+  --bg-tertiary: #efeade;
+  --bg-elevated: #ffffff;
+
+  --text-primary: #1a1612;
+  --text-secondary: #52463a;
+  --text-tertiary: #8a7a68;
+  --text-inverse: #f7f4ed;
+
+  --border-subtle: #e4dcc9;
+  --border-medium: #c9bfa8;
+  --border-strong: #1a1612;
+
+  --accent: #c2410c;
+  --accent-hover: #9a330a;
+  --accent-soft: #fef3e8;
+  --wrong: #b91c1c;
+  --wrong-soft: #fde8e8;
+  --hard: #c2410c;
+  --hard-soft: #fef3e8;
+  --good: #0f766e;
+  --good-soft: #e6f4f1;
+  --easy: #365314;
+  --easy-soft: #eef5e3;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+  --max-width: 1200px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --shadow-sm:
+    0 1px 2px rgba(26, 22, 18, 0.04), 0 2px 4px rgba(26, 22, 18, 0.04);
+  --shadow-md:
+    0 4px 6px rgba(26, 22, 18, 0.05), 0 10px 15px rgba(26, 22, 18, 0.06);
+  --shadow-lg:
+    0 10px 20px rgba(26, 22, 18, 0.06), 0 20px 40px rgba(26, 22, 18, 0.08);
+  --shadow-card:
+    0 1px 3px rgba(26, 22, 18, 0.05), 0 4px 12px rgba(26, 22, 18, 0.04);
+  --trans-fast: 150ms ease;
+  --trans-medium: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  --trans-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+}
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  transition: all var(--trans-fast);
+}
+
+.search-container:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    background: transparent;
+}
