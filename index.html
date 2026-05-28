@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="script/script.js" defer></script>
+    <script src="script/darkMode.js" defer></script>
+    <script src="script/init.js" defer></script>
+    <title>Academic Hub</title>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <h1>Academic Hub</h1>
+        <p>Sua plataforma de curadoria e revisão espaçada</p>
+      </div>
+      <div class="header-actions">
+        <a
+          class="btn-primary"
+          href="library.html"
+          aria-label="Abrir nova biblioteca"
+        >
+          Nova Biblioteca
+        </a>
+        <button
+          id="themeToggle"
+          class="btn-primary"
+          aria-label="Alternar Tema Escuro"
+          onclick="toggleTheme()"
+        >
+          Modo Claro
+        </button>
+      </div>
+    </header>
+    <main class="container">
+      <section class="search-section" aria-label="Pesquisa">
+        <div class="search-container">
+          <input
+            type="text"
+            placeholder="Buscar por assunto"
+            aria-label="Campo de pesquisa"
+          />
+        </div>
+      </section>
+      <article class="flashcard">
+        <span class="flashcard-category"> Arquitetura CSS </span>
+        <h2 class="flashcard-question">Qual é a função do Flexbox no CSS?</h2>
+        <button class="btn-primary" aria-label="Mostrar resposta">
+          Mostrar Resposta
+        </button>
+      </article>
+
+      <div id="flashcards-container"></div>
+    </main>
+  </body>
+</html>
