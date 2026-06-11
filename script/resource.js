@@ -43,4 +43,36 @@ const BASE_CARDS = [
   },
 ];
 
-export { BASE_CARDS };
+const RESOURCE_ORIGINS = {
+  VARIABLE: "VARIABLE",
+  JSON: "JSON",
+  LOCAL_STORAGE: "LOCAL_STORAGE",
+};
+
+const JSON_SOURCE_URL = "./data/flashcards.json";
+
+const getCardsFromJson = async () => {
+  try {
+    const response = await fetch(JSON_SOURCE_URL);
+    if (!response.ok) {
+      return [];
+    }
+
+    const data = await response.json();
+    if (!Array.isArray(data)) {
+      return [];
+    }
+
+    return data;
+  } catch (error) {
+    console.warn("Falha ao carregar fonte JSON:", error);
+    return [];
+  }
+};
+
+const getCards = async () => {
+  const jsonCards = await getCardsFromJson();
+  return jsonCards.length ? jsonCards : BASE_CARDS;
+};
+
+export { BASE_CARDS, RESOURCE_ORIGINS, getCards };
