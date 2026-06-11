@@ -120,7 +120,7 @@ p {
   /* Mantendo o header fixo no topo (opcional para UX) */
   position: sticky;
   top: 0;
-  /* z-index: 100; */
+  z-index: 100;
 }
 
 .app-header .brand h1 {
